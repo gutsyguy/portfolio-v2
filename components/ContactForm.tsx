@@ -6,6 +6,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
 
   const handleMessageChange = (e: any) => {
     let inputValue = e.target.value;
@@ -22,10 +23,16 @@ const ContactForm = () => {
     setName(inputValue);
   };
 
+  const handleSubjectChange = (e: any) => {
+    let inputValue = e.target.value;
+    setMessage(inputValue);
+  };
+
   const sendEmail = async (e: any) => {
     let data = {
       name,
       email,
+      subject,
       message,
     };
     e.preventDefault();
@@ -40,12 +47,14 @@ const ContactForm = () => {
       console.log("Response received");
       if (res.status === 200) {
         console.log("Response succeeded!");
+        setName("");
         setEmail("");
-        setMessage("");
+        setSubject("");
         setMessage("");
       } else {
+        setName("");
         setEmail("");
-        setMessage("");
+        setSubject("");
         setMessage("");
         console.log("Response failed");
         console.log(JSON.stringify(data));
@@ -59,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className="flex justify-center text-[1rem] py-[2rem] pb-[4rem]"
+      className="flex justify-center text-[1rem] py-[2rem]  pb-[2rem] text-white"
       data-te-animation-init
       data-te-animation-start="onScroll"
       data-te-animation-on-scroll="repeat"
@@ -68,16 +77,16 @@ const ContactForm = () => {
       data-aos="fade-up"
     >
       <form
-        className="border-2 border-solid  px-[5rem] rounded-xl bg-blue-400"
+        className="border-2 border-solid rounded-xl bg-blue-400 px-[5rem]"
         onSubmit={sendEmail}
       >
-        <h1 className="text-[3rem]">Contact Me</h1>
-        <div className="w-full flex flex-col my-4">
-          <label htmlFor="name" className="font-bold text-white">
+        <h1 className="text-[2rem] text-center">Contact Me</h1>
+        <div className="w-full flex flex-col my-4 ">
+          <label htmlFor="name" className="font-bold ">
             Name
           </label>
           <input
-            className=" border-2 text-black border-solid rounded-md"
+            className=" border-2 text-black border-solid rounded-md text-start"
             minLength={3}
             maxLength={150}
             value={name}
@@ -110,14 +119,14 @@ const ContactForm = () => {
           <input
             className=" border-2 text-black border-solid rounded-md"
             minLength={3}
-            maxLength={150}
-            value={name}
-            onChange={handleNameChange}
+            maxLength={50}
+            value={subject}
+            onChange={handleSubjectChange}
             required
             type="text"
-            placeholder="Enter name"
+            placeholder="Enter Subject"
             autoComplete="off"
-            id="name"
+            id="subject"
           />
         </div>
         <div>

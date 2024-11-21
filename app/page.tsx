@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
+import ProjectSlider from "@/components/Project/ProjectSlider";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
         </h1>
       </section>
       <section>
-        <h1 className="text-center">Example Projects</h1>
+        <h1 className="text-center text-[2rem] my-[1rem]">Example Projects</h1>
+        <ProjectSlider />
       </section>
       <section>
-        <h1 className="text-center">Skills</h1>
+        <h1 className="text-center text-[2rem] my-[1rem]">Skills</h1>
       </section>
 
       <section>
