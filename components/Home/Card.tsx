@@ -1,0 +1,43 @@
+import React from "react";
+import Image from "next/image";
+
+const Card = () => {
+  return (
+    <div
+      data-aos="fade-up"
+      className="flex flex-col items-start mb-5 pb-6 p-10 bg-white border-2 border-black  shadow-2xl rounded-2xl dark:shadow-transparent "
+    >
+      <div className="flex sm:flex-row grid-cols-2 content-center w-full ">
+        <div className="flex flex-col">
+          {/* // Fix font later */}
+          <h1 className=" items-center font-bold text-5xl sm:text-7xl tracking-tight mb-1 text-red-400">
+            Yalamber <br /> Subba
+          </h1>
+        </div>
+        <div className="w-[80px] sm:w-[250px] relative mb-8 sm:mb-0 mx-auto">
+          <Image
+            alt="Yalamber Subba"
+            height={250}
+            width={250}
+            src="/image.png"
+            sizes="30vw"
+            priority
+            className="rounded-full filter dark:grayscale"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-gray-700  mb-4 text-2xl">
+          Software Engineer <br />
+          1st year ECE at <span className="font-semibold">UC Davis</span>
+        </h2>
+        <p className="text-gray-600 text-xl dark:text-gray-400 ">
+          Full-stack and mobile developer
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
