@@ -25,7 +25,7 @@ const ContactForm = () => {
 
   const handleSubjectChange = (e: any) => {
     let inputValue = e.target.value;
-    setMessage(inputValue);
+    setSubject(inputValue);
   };
 
   const sendEmail = async (e: any) => {
@@ -68,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className="flex justify-center text-[1rem] py-[2rem]  pb-[2rem] text-white"
+      className="flex justify-center items-center h-screen text-white"
       data-te-animation-init
       data-te-animation-start="onScroll"
       data-te-animation-on-scroll="repeat"
@@ -77,77 +77,71 @@ const ContactForm = () => {
       data-aos="fade-up"
     >
       <form
-        className="border-2 border-solid rounded-xl bg-blue-400 px-[5rem]"
+        className="w-full max-w-[90%] mx-auto bg-red-400 rounded-xl p-8"
         onSubmit={sendEmail}
       >
-        <h1 className="text-[2rem] text-center">Contact Me</h1>
-        <div className="w-full flex flex-col my-4 ">
-          <label htmlFor="name" className="font-bold ">
+        <h1 className="text-3xl font-bold text-center mb-6">Contact Me</h1>
+        <div className="mb-4">
+          <label htmlFor="name" className="block mb-2">
             Name
           </label>
           <input
-            className=" border-2 text-black border-solid rounded-md text-start"
-            minLength={3}
-            maxLength={150}
+            type="text"
+            id="name"
+            className="w-full px-4 py-2 text-base text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={name}
             onChange={handleNameChange}
             required
-            type="text"
             placeholder="Enter name"
-            autoComplete="off"
-            id="name"
           />
         </div>
-        <div className="w-full flex flex-col my-4">
-          <label htmlFor="email" className="font-bold text-white">
+        <div className="mb-4">
+          <label htmlFor="email" className="block mb-2">
             Email
           </label>
           <input
-            className=" text-black border-2 border-solid rounded-md"
-            required
             type="email"
+            id="email"
+            className="w-full px-4 py-2 text-base text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={email}
             onChange={handleEmailChange}
+            required
             placeholder="Enter email"
-            id="email"
           />
         </div>
-        <div className="w-full flex flex-col my-4">
-          <label htmlFor="name" className="font-bold text-white">
+        <div className="mb-4">
+          <label htmlFor="subject" className="block mb-2">
             Subject
           </label>
           <input
-            className=" border-2 text-black border-solid rounded-md"
-            minLength={3}
-            maxLength={50}
+            type="text"
+            id="subject"
+            className="w-full px-4 py-2 text-base text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={subject}
             onChange={handleSubjectChange}
             required
-            type="text"
-            placeholder="Enter Subject"
-            autoComplete="off"
-            id="subject"
+            placeholder="Enter subject"
           />
         </div>
-        <div>
-          <label htmlFor="message" className="font-bold text-white">
+        <div className="mb-6">
+          <label htmlFor="message" className="block mb-2">
             Message
           </label>
           <textarea
-            name="message"
-            rows={2}
+            id="message"
+            className="w-full px-4 py-4 text-base text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows={4}
             required
             minLength={10}
             maxLength={150}
-            placeholder="Message"
             value={message}
             onChange={handleMessageChange}
-            className="w-full p-4 bg-gray-50 border border-[#] rounded-md text-black"
+            placeholder="Your message here..."
           ></textarea>
         </div>
         <button
-          className="text-white py-2 mt-[2rem] bg-gray-700 font-medium rounded-md mb-4 px-[5rem] border-[#D8A206] border-2 border-solid"
           type="submit"
+          className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-4 py-3 rounded-md shadow-sm transition duration-300 ease-in-out hover:-translate-y-0.5 transform"
         >
           Submit
         </button>

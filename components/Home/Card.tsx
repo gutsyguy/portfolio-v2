@@ -14,7 +14,7 @@ const Card = () => {
             Yalamber <br /> Subba
           </h1>
         </div>
-        <div className="w-[80px] sm:w-[250px] relative mb-8 sm:mb-0 mx-auto">
+        <div className="w-[80px] sm:w-[250px] relative mb-8 sm:mb-0 mx-auto ">
           <Image
             alt="Yalamber Subba"
             height={250}
@@ -22,7 +22,7 @@ const Card = () => {
             src="/image.png"
             sizes="30vw"
             priority
-            className="rounded-full filter dark:grayscale"
+            className="rounded-full border border-black filter dark:grayscale"
           />
         </div>
       </div>
