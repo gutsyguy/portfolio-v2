@@ -7,3 +7,11 @@ export interface Project{
     technologies: string[];
     github: string;
 }
+
+export interface TimelineElement{
+    title: string,
+    type: string,
+    date: string,
+    description: string
+
+}
