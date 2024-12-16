@@ -7,11 +7,11 @@ interface TimelineContainerProps {
 
 const RightTimelineComponent = (props: TimelineContainerProps) => {
   return (
-    <div className="mt-6 sm:mt-0 sm:mb-12" data-aos="fade-up">
+    <div className="mt-6 sm:mt-0 sm:mb-12" data-aos="zoom-out">
       <div className="flex flex-col sm:flex-row items-center">
         <div className="flex justify-end w-full mx-auto items-center ">
           <div className="w-full sm:w-1/2 sm:pl-8">
-            <div className="p-4 bg-red-400 text-[#e9c045] rounded shadow border-solid border-[#D7A514] border-2">
+            <div className="p-4 bg-red-400 text-gray-700 rounded shadow border-solid border-gray-700 border-2">
               <h1 className=" text-xl">{props.title} </h1>
               <h1 className=" text-lg"> {props.type}</h1>
               <h1>{props.date}</h1>
@@ -19,10 +19,10 @@ const RightTimelineComponent = (props: TimelineContainerProps) => {
             </div>
           </div>
         </div>
-        <div className="rounded-full bg-red-400 border-[#D7A514] border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+        <div className="rounded-full bg-red-400 border-gray-700 border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-[#D7A514]"
+            className="h-5 w-5 text-gray-700"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

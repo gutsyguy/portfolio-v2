@@ -4,7 +4,7 @@ import Image from "next/image";
 const Card = () => {
   return (
     <div
-      data-aos="fade-up"
+      data-aos="zoom-out"
       className="flex flex-col items-start mb-5 pb-6 p-10 bg-white border-2 border-black  shadow-2xl rounded-2xl dark:shadow-transparent "
     >
       <div className="flex sm:flex-row grid-cols-2 content-center w-full ">

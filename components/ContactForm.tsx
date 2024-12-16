@@ -68,16 +68,16 @@ const ContactForm = () => {
 
   return (
     <div
-      className="flex justify-center items-center h-screen text-white "
+      className="flex justify-center items-center h-screen text-white  "
       data-te-animation-init
       data-te-animation-start="onScroll"
       data-te-animation-on-scroll="repeat"
       data-te-animation-show-on-load="false"
       data-te-animation="[slide-right_1s_ease-in-out]"
-      data-aos="fade-up"
+      data-aos="zoom-out"
     >
       <form
-        className="w-full max-w-[90%] mx-auto bg-red-400 rounded-xl p-8"
+        className="w-full max-w-[90%] mx-auto bg-red-400 rounded-xl p-8 border border-gray-700"
         onSubmit={sendEmail}
       >
         <h1 className="text-3xl font-bold text-center mb-6">Contact Me</h1>

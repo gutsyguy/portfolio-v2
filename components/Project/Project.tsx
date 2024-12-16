@@ -5,8 +5,8 @@ import Image from "next/image";
 const ProjectCard = (props: Project) => {
   const { id, name, description, image, url, technologies, github } = props;
   return (
-    <div className="text-white my-[2rem]">
-      <div className="bg-red-400 rounded-lg shadow-md border-2 border-solid transform transition ease-in-out duration-500 hover:scale-110">
+    <div className="text-white my-[2rem]" data-aos="zoom-out">
+      <div className="bg-red-400 rounded-lg shadow-md border-2 border-gray-700 border-solid transform transition ease-in-out duration-500 hover:scale-110">
         <div className="flex justify-center">
           {/* Using max-w-full to ensure image doesn't overflow its container and w-full to take full width of its container */}
           <Image
@@ -18,7 +18,7 @@ const ProjectCard = (props: Project) => {
           />
         </div>
         <div className="p-4">
-          <h2 className="text-2xl font-semibold text-[#D7A514]">{name}</h2>
+          <h2 className="text-2xl font-semibold text-gray-700">{name}</h2>
           <h1 className="text-md">{description}</h1>
           <h1 className="text-md">Skills: {technologies}</h1>
           <a href={github}>

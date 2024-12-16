@@ -38,8 +38,9 @@ export default function RootLayout({
           className="bg-top bg-cover px-0 "
           style={{
             backgroundImage: "url('/light.png')",
-            backgroundSize: "auto",
-            backgroundRepeat: "repeat-y",
+            backgroundSize: "contain",
+
+            // backgroundRepeat: "repeat-y",
             // backgroundPosition: "0 0, 0 50%",
           }}
         >

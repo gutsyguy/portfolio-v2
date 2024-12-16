@@ -7,11 +7,11 @@ interface LeftTimelineContainerProps {
 
 const LeftTimelineComponent = (props: LeftTimelineContainerProps) => {
   return (
-    <div className="mt-6 sm:mt-0 sm:mb-12" data-aos="fade-up">
+    <div className="mt-6 sm:mt-0 sm:mb-12" data-aos="zoom-out">
       <div className="flex flex-col sm:flex-row items-center">
         <div className="flex justify-start w-full mx-auto items-center">
           <div className="w-full sm:w-1/2 sm:pr-8">
-            <div className="p-4 bg-red-400 rounded shadow text-[#e9c045] border-solid border-[#D7A514] border-2">
+            <div className="p-4 bg-red-400 rounded shadow text-gray-700 border-solid border-gray-700 border-2">
               <h1 className=" text-xl">{props.title} </h1>
               <h1 className="text-lg">{props.type}</h1>
               <h1>{props.date}</h1>
@@ -19,10 +19,10 @@ const LeftTimelineComponent = (props: LeftTimelineContainerProps) => {
             </div>
           </div>
         </div>
-        <div className="rounded-full bg-red-400 border-[#D7A514] border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+        <div className="rounded-full bg-red-400 border-gray-700 border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-[#D7A514] border-black"
+            className="h-5 w-5 text-gray-700 border-black"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
