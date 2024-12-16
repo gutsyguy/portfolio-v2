@@ -6,10 +6,7 @@ import Card from "@/components/Home/Card";
 
 export default function Home() {
   return (
-    <div
-      className="text-black bg-no-repeat"
-      style={{ backgroundImage: "url('/timeline.svg')" }}
-    >
+    <div className="text-black px-[15rem]">
       <section className="flex flex-col items-center justify-center h-screen ">
         <Card />
         {/* <h1>

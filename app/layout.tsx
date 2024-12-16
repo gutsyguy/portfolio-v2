@@ -28,11 +28,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-200 px-[15rem]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-300`}
         suppressHydrationWarning
       >
-        <Navbar />
-        {children}
+        <div className="bg-navbar px-[15rem]">
+          <Navbar />
+        </div>
+        <div
+          className="bg-top bg-cover px-0 "
+          style={{
+            backgroundImage: "url('/light.png')",
+            backgroundSize: "auto",
+            backgroundRepeat: "repeat-y",
+            // backgroundPosition: "0 0, 0 50%",
+          }}
+        >
+          <div className="px[15rem]">{children}</div>
+        </div>
       </body>
     </html>
   );

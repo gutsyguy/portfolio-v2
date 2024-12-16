@@ -12,6 +12,16 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundPosition:{
+        "navbar": "center 1rem"
+      },
+      transform:{
+        // "rotate": "rotate(90deg)"
+      },
+      rotate: {
+        '90': '90deg',
+        '-90': '-90deg',
+      },
     },
   },
   plugins: [],

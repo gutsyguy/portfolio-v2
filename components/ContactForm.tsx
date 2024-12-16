@@ -68,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className="flex justify-center items-center h-screen text-white"
+      className="flex justify-center items-center h-screen text-white "
       data-te-animation-init
       data-te-animation-start="onScroll"
       data-te-animation-on-scroll="repeat"
@@ -141,7 +141,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-4 py-3 rounded-md shadow-sm transition duration-300 ease-in-out hover:-translate-y-0.5 transform"
+          className="w-full text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-4 py-3 rounded-md shadow-sm transition duration-300 ease-in-out hover:-translate-y-0.5 transform"
         >
           Submit
         </button>

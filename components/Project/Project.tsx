@@ -22,7 +22,7 @@ const ProjectCard = (props: Project) => {
           <h1 className="text-md">{description}</h1>
           <h1 className="text-md">Skills: {technologies}</h1>
           <a href={github}>
-            <button className="px-4 py-2 mt-4 text-white bg-blue-600 rounded-md hover:bg-blue-700">
+            <button className="px-4 py-2 mt-4 text-white bg-gray-400 rounded-md hover:bg-gray-500">
               Source Code
             </button>
           </a>
