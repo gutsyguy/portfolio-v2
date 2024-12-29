@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Email } from "@/lib/interfaces";
 
 const ContactForm = () => {
   const [email, setEmail] = useState("");
@@ -28,39 +29,37 @@ const ContactForm = () => {
     setSubject(inputValue);
   };
 
-  const sendEmail = async (e: any) => {
-    let data = {
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const data = {
       name,
       email,
       subject,
       message,
     };
-    e.preventDefault();
-    fetch("/api/contact", {
+
+    console.log("Sending data:", data);
+
+    const res = await fetch("/api/contact", {
       method: "POST",
       headers: {
-        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      console.log("Response received");
-      if (res.status === 200) {
-        console.log("Response succeeded!");
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-      } else {
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-        console.log("Response failed");
-        console.log(JSON.stringify(data));
-      }
     });
+
+    if (res.ok) {
+      console.log("Email sent successfully");
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    } else {
+      console.error("Failed to send email");
+    }
   };
+
 
   useEffect(() => {
     AOS.init();

@@ -15,3 +15,11 @@ export interface TimelineElement{
     description: string
 
 }
+
+export interface Email{
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+
+}
