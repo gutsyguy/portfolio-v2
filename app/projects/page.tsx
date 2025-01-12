@@ -2,7 +2,6 @@
 import React from "react";
 import ProjectCard from "@/components/Project/Project";
 import { Project } from "@/lib/interfaces";
-import { fakeData } from "@/lib/fakeData";
 import { db } from "@/lib/firebase";
 import { collection, getDocs, query } from "firebase/firestore";
 import { useState, useEffect } from "react";

@@ -1,9 +1,7 @@
 "use client";
 import RightTimelineComponent from "@/components/Experience/RightTimelineComponent";
 import LeftTimelineComponent from "@/components/Experience/LeftTimelineComponent";
-import Navbar from "@/components/Navbar";
 import AOS from "aos";
-import { fakeTimeline } from "@/lib/fakeData";
 import "aos/dist/aos.css";
 import { db } from "@/lib/firebase";
 import { collection, getDocs, query } from "firebase/firestore";

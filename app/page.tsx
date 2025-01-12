@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import ProjectSlider from "@/components/Project/ProjectSlider";
 import Card from "@/components/Home/Card";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TimelineContainerProps } from "@/lib/interfaces";
 
 const RightTimelineComponent = (props: TimelineContainerProps) => {
-  const [isHovering, setIsHovering] = useState<Boolean>(false);
+  const [isHovering, setIsHovering] = useState<boolean>(false);
 
   const handleHoverTrue = () => setIsHovering(true);
   const handleHoverFalse = () => setIsHovering(false);

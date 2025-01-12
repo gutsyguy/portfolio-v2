@@ -1,28 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { fakeData } from "@/lib/fakeData";
 import { Project } from "@/lib/interfaces";
 import Image from "next/image";
+import { db } from "@/lib/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
-const page = () => {
+const Page = () => {
   const params = useParams().project;
   const [project, setProject] = useState<Project>();
 
-  const FindProjectById = (id: number) => {
-    for (let i = 0; i < fakeData.length; i++) {
-      if (fakeData[i].id === id) {
-        setProject(fakeData[i]);
-        return;
+  const getProject = async (id: number) => {
+    try {
+      const collectionRef = collection(db, "projects");
+      const q = query(collectionRef, where("id", "==", id));
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        const docData = querySnapshot.docs[0].data() as Project;
+        setProject(docData);
+      } else {
+        console.log("No matching project found.");
       }
+    } catch (error) {
+      console.error("Error fetching project:", error);
     }
   };
 
   useEffect(() => {
-    FindProjectById(Number(params));
+    getProject(Number(params));
   });
 
-  console.log(project);
   if (project) {
     return (
       <div className="text-black mx-[4rem]">
@@ -31,7 +39,13 @@ const page = () => {
         <p>{project.description}</p>
       </div>
     );
+  } else {
+    return (
+      <div>
+        <h1>Project not found</h1>
+      </div>
+    );
   }
 };
 
-export default page;
+export default Page;
