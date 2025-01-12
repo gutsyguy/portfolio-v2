@@ -47,10 +47,11 @@ const Page = () => {
           Elgoog: The reverse search engine
         </h1>
         <p className="text-[1.2rem]">
-          Are you bored? Maybe you feel like doing something dumb. Well, we've
-          got just the thing to make you chuckle - Elgoog! Elgoog is a "search
-          engine" modeled after Google, built using Next.js, Tailwind, Vercel,
-          and the Google API. Except you get the opposite of what you want.
+          Are you bored? Maybe you feel like doing something dumb. Well,
+          we&apos;ve got just the thing to make you chuckle - Elgoog! Elgoog is
+          a &quot;search engine&quot; modeled after Google, built using Next.js,
+          Tailwind, Vercel, and the Google API. Except you get the opposite of
+          what you want.
         </p>
         <Image
           className="py-[1rem] rounded-xl"
@@ -64,9 +65,9 @@ const Page = () => {
         <h1 className="text-[1.5rem] font-medium bg-gray-400 border-2 border-gray-500 px-[1rem]">
           All you have to do is search and see what comes up.
         </h1>
-        <h2 className="">Now lets test it</h2>
+        <h2 className="">Now let&apos;s test it</h2>
         <h1 className="text-[1.5rem] font-medium bg-gray-400 border-2 border-gray-500 px-[1rem]">
-          Try typing "bad person playing on piano"...
+          Try typing &quot;bad person playing on piano&quot;...
         </h1>
         <Image
           className=" rounded-xl py-[1rem]"
@@ -79,17 +80,17 @@ const Page = () => {
         />
         <h1 className="text-[2rem]">Software Background</h1>
         <p>
-          We can up with a couple solutions but ultimately implemented it by
+          We came up with a couple solutions but ultimately implemented it by
           using the Antonym and Google API.
         </p>
         <h1 className="text-[2rem]">How it works</h1>
         <p className="bg-gray-400 border-2 border-gray-500 px-[1rem]">{`InputText => PhraseSplitter => AntonymsAPI => NewPhrase => GoogleSearchAPI => Results (which appears on the page)`}</p>
         <h1>
-          {`Now when we return we see that we get to opposite of "bad person
+          {`Now when we return we see that we get the opposite of "bad person
           playing piano."`}
         </h1>
         <p className="bg-gray-400 border-2 border-gray-500 px-[1rem]">
-          It returns "good person playing off forte"
+          It returns &quot;good person playing off forte&quot;
         </p>
         <Image
           className="rounded-xl py-[1rem]"
@@ -102,12 +103,11 @@ const Page = () => {
         />
         <h1 className="text-[2rem] font-medium">Reflection</h1>
         <p>
-          The goal with this project was to do things to do things upside down
-          you can see, we get the complete opposite of what we searched for, if
-          you try searching good, the first result will be "Bad" by Michael
+          The goal with this project was to do things upside down. You can see,
+          we get the complete opposite of what we searched for. If you try
+          searching good, the first result will be &quot;Bad&quot; by Michael
           Jackson.
         </p>
-        {/* <p>{project.description}</p> */}
       </div>
     );
   } else {
