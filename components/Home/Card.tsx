@@ -9,7 +9,6 @@ const Card = () => {
     >
       <div className="flex sm:flex-row grid-cols-2 content-center w-full ">
         <div className="flex flex-col">
-          {/* // Fix font later */}
           <h1 className=" items-center font-bold text-5xl sm:text-7xl tracking-tight mb-1 text-red-400 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             Yalamber <br /> Subba
           </h1>
@@ -19,7 +18,7 @@ const Card = () => {
             alt="Yalamber Subba"
             height={250}
             width={250}
-            src="/image.png"
+            src={`/yalamber.png`}
             sizes="30vw"
             priority
             className="rounded-full border border-black filter dark:grayscale"
