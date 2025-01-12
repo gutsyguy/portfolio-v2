@@ -1,11 +1,14 @@
 "use client";
-import { useEffect } from "react";
 import RightTimelineComponent from "@/components/Experience/RightTimelineComponent";
 import LeftTimelineComponent from "@/components/Experience/LeftTimelineComponent";
 import Navbar from "@/components/Navbar";
 import AOS from "aos";
 import { fakeTimeline } from "@/lib/fakeData";
 import "aos/dist/aos.css";
+import { db } from "@/lib/firebase";
+import { collection, getDocs, query } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import { TimelineContainerProps } from "@/lib/interfaces";
 
 const checkTimelineSide = (count: number) => {
   if (count % 2 == 0) {
@@ -15,8 +18,32 @@ const checkTimelineSide = (count: number) => {
   }
 };
 const Timeline = () => {
+  const [data, setData] = useState<TimelineContainerProps[]>([]);
+
+  const updateData = async (): Promise<void> => {
+    try {
+      const snapshot = query(collection(db, "timeline"));
+      const docs = await getDocs(snapshot);
+      const timelineData: TimelineContainerProps[] = docs.docs.map((doc) => ({
+        id: doc.data().id,
+        company: doc.data().company,
+        role: doc.data().role,
+        date: doc.data().date,
+        description: doc.data().description,
+      }));
+
+      timelineData.sort((a, b) => a.id - b.id);
+
+      console.log(timelineData);
+      setData(timelineData);
+    } catch (error) {
+      console.error("Error fetching inventory:", error);
+    }
+  };
+
   useEffect(() => {
     AOS.init();
+    updateData();
   }, []);
 
   return (
@@ -38,15 +65,16 @@ const Timeline = () => {
         <div className="py-3  sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
           <div className="relative  text-gray-700 antialiased text-sm font-semibold">
             <div className="hidden border border-gray-800 sm:block w-1 bg-red-400 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-            {fakeTimeline.map((timelineElement, i) =>
+            {data.map((timelineElement, i) =>
               checkTimelineSide(i) ? (
                 <LeftTimelineComponent
                   data-aos="fade-up"
                   data-aos-duration="3000"
                   data-aos-delay="1000"
-                  title={timelineElement.title}
+                  company={timelineElement.company}
                   key={i}
-                  type={timelineElement.type}
+                  id={timelineElement.id}
+                  role={timelineElement.role}
                   date={timelineElement.date}
                   description={timelineElement.description}
                 />
@@ -55,9 +83,10 @@ const Timeline = () => {
                   data-aos="fade-up"
                   data-aos-duration="3000"
                   data-aos-delay="1000"
-                  title={timelineElement.title}
+                  company={timelineElement.company}
                   key={i}
-                  type={timelineElement.type}
+                  id={timelineElement.id}
+                  role={timelineElement.role}
                   date={timelineElement.date}
                   description={timelineElement.description}
                 />
