@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 export interface Project{
     id: number;
     name: string;
@@ -30,3 +32,9 @@ export interface TimelineContainerProps {
   role: string;
   date: string;
 }
+
+export interface ModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    children: ReactNode;
+  }

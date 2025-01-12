@@ -1,18 +1,36 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Link from "next/link";
+import Modal from "./Modal";
 
 const Navbar = () => {
+  const [openResume, setOpenResume] = useState(false);
+
   return (
     <nav className="flex flex-row justify-evenly py-10 border-b border-gray-800 text-gray-600 text-[1.5rem]">
       <Link href={"/"}>
-        <div className="">Home</div>
+        <div>Home</div>
       </Link>
       <Link href={"/experience"}>
-        <div className="">Experience</div>
+        <div>Experience</div>
       </Link>
       <Link href={"/projects"}>
-        <div className="">Project</div>
+        <div>Project</div>
       </Link>
+      <button
+        className="px-[1rem] rounded-xl"
+        onClick={() => setOpenResume(true)}
+      >
+        Resume
+      </button>
+      <Modal isOpen={openResume} onClose={() => setOpenResume(false)}>
+        <iframe
+          src="https://drive.google.com/file/d/1zy6l5K_jgU7HJtKzGIUV_0e-cvm-40iF/preview"
+          width="640"
+          height="480"
+          allow="autoplay"
+        ></iframe>
+      </Modal>
     </nav>
   );
 };

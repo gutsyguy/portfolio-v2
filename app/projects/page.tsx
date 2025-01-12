@@ -53,7 +53,13 @@ const Page = () => {
             />
           ))
         ) : (
-          <p>Null</p>
+          <div className="flex flex-row justify-center items-center">
+            <svg
+              className="bg-gray-900 animate-spin h-5 w-5 mr-3 ..."
+              viewBox="0 0 24 24"
+            ></svg>
+            <h1>Processing...</h1>
+          </div>
         )}
       </div>
     </div>

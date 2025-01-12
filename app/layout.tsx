@@ -36,7 +36,7 @@ export default function RootLayout({
         <div
           className="bg-top bg-cover px-0 "
           style={{
-            backgroundImage: "url('/vvvortex.svg')",
+            // backgroundImage: "url('/vvvortex.svg')",
             backgroundSize: "cover",
             backgroundAttachment: "scroll",
           }}
