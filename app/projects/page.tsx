@@ -6,7 +6,7 @@ import { fakeData } from "@/lib/fakeData";
 const Page = () => {
   return (
     <div>
-      <div className="flex flex-row flex-wrap justify-evenly my-[2rem]">
+      <div className="flex flex-row flex-wrap justify-evenly ">
         {fakeData.map((project, index) => (
           <ProjectCard
             id={project.id}

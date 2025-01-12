@@ -37,12 +37,9 @@ export default function RootLayout({
         <div
           className="bg-top bg-cover px-0 "
           style={{
-            backgroundImage: "url('/light.png')",
-            backgroundSize: "auto",
-            // backgroundSize: "cover",
-
-            // backgroundRepeat: "repeat-y",
-            // backgroundPosition: "0 0, 0 50%",
+            backgroundImage: "url('/vvvortex.svg')",
+            backgroundSize: "cover",
+            backgroundAttachment: "scroll",
           }}
         >
           <div className="px[15rem]">{children}</div>

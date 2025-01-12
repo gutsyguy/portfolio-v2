@@ -1,21 +1,49 @@
-interface TimelineContainerProps {
-  description: string;
-  type: string;
-  title: string;
-  date: string;
-}
+import { RightTimelineContainerProps } from "@/lib/interfaces";
+import { useState } from "react";
 
-const RightTimelineComponent = (props: TimelineContainerProps) => {
+const RightTimelineComponent = (props: RightTimelineContainerProps) => {
+  const [isHovering, setIsHovering] = useState<Boolean>(false);
+
+  const handleHoverTrue = () => setIsHovering(true);
+  const handleHoverFalse = () => setIsHovering(false);
+
   return (
-    <div className="mt-6 sm:mt-0 sm:mb-12" data-aos="zoom-out">
+    <div
+      className="mt-6 sm:mt-0 sm:mb-12 transform transition duration-700"
+      data-aos="zoom-out"
+    >
       <div className="flex flex-col sm:flex-row items-center">
-        <div className="flex justify-end w-full mx-auto items-center ">
-          <div className="w-full sm:w-1/2 sm:pl-8">
-            <div className="p-4 bg-red-400 text-gray-700 rounded shadow border-solid border-gray-700 border-2">
-              <h1 className=" text-xl">{props.title} </h1>
-              <h1 className=" text-lg"> {props.type}</h1>
-              <h1>{props.date}</h1>
-              <h1 className="text-white">{props.description}</h1>
+        <div className="flex justify-end w-full mx-auto items-center">
+          <div
+            className={`w-full sm:w-1/2 sm:pl-8 transition-transform duration-700 ${
+              isHovering ? "scale-105 opacity-100" : "scale-100 opacity-90"
+            }`}
+          >
+            <div
+              className="p-4 bg-red-400 rounded shadow text-gray-700 border-solid border-gray-700 border-2 transform transition-all duration-500"
+              onMouseEnter={handleHoverTrue}
+              onMouseLeave={handleHoverFalse}
+            >
+              <div>
+                <h1 className="text-xl">{props.title}</h1>
+                <h1 className="text-lg">{props.type}</h1>
+                <h1>{props.date}</h1>
+                {isHovering && (
+                  <div
+                    className="list-disc pl-5 overflow-y-auto mt-4"
+                    style={{
+                      maxHeight: "150px", // Set max height for scrollable area
+                      paddingRight: "1rem", // Optional: Space for scrollbar
+                    }}
+                  >
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: props.description,
+                      }}
+                    ></div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

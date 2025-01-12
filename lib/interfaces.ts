@@ -23,3 +23,16 @@ export interface Email{
     message: string;
 
 }
+export interface LeftTimelineContainerProps {
+  description: string;
+  title: string;
+  type: string;
+  date: string;
+}
+
+export interface RightTimelineContainerProps {
+    description: string;
+    title: string;
+    type: string;
+    date: string;
+  }
