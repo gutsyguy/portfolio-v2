@@ -5,16 +5,7 @@ export const fakeTimeline = [
         title:"Google Code Next",
         type:"Student",
         date:"September 2020 - June 2024",
-        // description:"Joined during freshman year"
         description: `
-                      <li>
-                        Teaching: Taught mobile development to high schoolers
-                        from underrepresented communities.
-                      </li>
-                      <li>
-                        Learning: Learned iOS, entrepreneurship, and product
-                        development from Google engineers.
-                      </li>
                       <li>
                         Programming: Built a portfolio website with Next.js and
                         mobile apps with iOS.
@@ -22,10 +13,6 @@ export const fakeTimeline = [
                       <li>
                         Hardware: Built hardware projects with the Raspberry Pi
                         including a Raspberry Pi Camera.
-                      </li>
-                      <li>
-                        Presentations: Presented every quarterly demo day for 3
-                        years to 100+ people.
                       </li>
                     `
     },
@@ -138,8 +125,8 @@ export const fakeData: Project[] = [
       description: "A bus tracking system for UC Santa Cruz",
       image: "/file.svg",
       url: "https://www.example.com",
-      technologies: ["3"],
-      github: "github.com/gutsyguy",
+      technologies: ["Express.js, React Native, PostgreSQL"],
+      github: "https://github.com/gutsyguy",
     },
     {
       id: 2,
@@ -147,7 +134,7 @@ export const fakeData: Project[] = [
       description: "A reverse search engine developed for lancerhacks",
       image: "file.svg",
       url: "https://www.example.com",
-      technologies: ["3"],
+      technologies: ["Next.js, React.js, Chatgpt API"],
       github: "github.com/gutsyguy",
     },
     {
@@ -156,7 +143,7 @@ export const fakeData: Project[] = [
       description: "A remote controlled roomba",
       image: "file.svg",
       url: "https://www.example.com",
-      technologies: ["3"],
+      technologies: ["Raspberry Pi, React Native, AWS"],
       github: "github.com/gutsyguy",
     },
     {
@@ -165,7 +152,7 @@ export const fakeData: Project[] = [
       description: "A netflix clone",
       image: "file.svg",
       url: "https://www.example.com",
-      technologies: ["3"],
+      technologies: ["Next.js"],
       github: "github.com/gutsyguy",
     },
     {
@@ -174,7 +161,7 @@ export const fakeData: Project[] = [
       description: "An AI rate my professor",
       image: "file.svg",
       url: "https://www.example.com",
-      technologies: ["3"],
+      technologies: ["Next.js, React.js, Firebase, Gemini, PineconeDB"],
       github: "github.com/gutsyguy",
     },
   ];

@@ -16,7 +16,7 @@ const ProjectCard = (props: Project) => {
             alt={name}
           />
         </div>
-        <div className="p-4 min-h-[200px] flex flex-col justify-between">
+        <div className="p-4 min-h-[240px] flex flex-col justify-between">
           <div>
             <h2 className="text-2xl font-semibold text-gray-700 truncate">
               {name}
