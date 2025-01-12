@@ -18,7 +18,7 @@ const Card = () => {
             alt="Yalamber Subba"
             height={250}
             width={250}
-            src={"/yalamber.svg"}
+            src={"/yalamber.png"}
             sizes="30vw"
             priority
             className="rounded-full border border-black filter dark:grayscale"
