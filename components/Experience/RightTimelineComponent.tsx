@@ -25,7 +25,9 @@ const RightTimelineComponent = (props: TimelineContainerProps) => {
               onMouseLeave={handleHoverFalse}
             >
               <div>
-                <h1 className="text-xl">{props.company}</h1>
+                <h1 className="text-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">
+                  {props.company}
+                </h1>
                 <h1 className="text-lg">{props.role}</h1>
                 <h1>{props.date}</h1>
                 {isHovering && (

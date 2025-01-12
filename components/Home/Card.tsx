@@ -10,7 +10,7 @@ const Card = () => {
       <div className="flex sm:flex-row grid-cols-2 content-center w-full ">
         <div className="flex flex-col">
           {/* // Fix font later */}
-          <h1 className=" items-center font-bold text-5xl sm:text-7xl tracking-tight mb-1 text-red-400">
+          <h1 className=" items-center font-bold text-5xl sm:text-7xl tracking-tight mb-1 text-red-400 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             Yalamber <br /> Subba
           </h1>
         </div>
@@ -27,12 +27,12 @@ const Card = () => {
         </div>
       </div>
 
-      <div>
-        <h2 className="text-gray-700  mb-4 text-2xl">
+      <div className="">
+        <h2 className="text-gray-700  mb-4 text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           Software Engineer <br />
           1st year ECE at <span className="font-semibold">UC Davis</span>
         </h2>
-        <p className="text-gray-600 text-xl dark:text-gray-400 ">
+        <p className="text-gray-600 text-xl dark:text-gray-400 drop-shadow-[0_1.2px_1.2px_rgba(0.2,0,0,0.2)]">
           Full-stack and mobile developer
         </p>
       </div>

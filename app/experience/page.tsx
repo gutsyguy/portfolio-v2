@@ -52,8 +52,8 @@ const Timeline = () => {
       //   style={{ backgroundImage: `url(${require("public/Timeline.svg")})` }}
       id="Timeline"
     >
-      <div className="text-center pt-[1rem]">
-        <h1 data-aos="fade-up" className="text-[2rem] text-gray-600">
+      <div className="text-center pt-[1rem] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+        <h1 data-aos="fade-up" className="text-[2rem]">
           <b id="About">What I have done</b>
         </h1>
         <h1 data-aos="fade-up" className="text-[5rem]">

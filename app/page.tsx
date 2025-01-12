@@ -11,11 +11,15 @@ export default function Home() {
         <Card />
       </section>
       <section>
-        <h1 className="text-center text-[2rem]">Example Projects</h1>
+        <h1 className="text-center text-[4rem] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+          Example Projects
+        </h1>
         <ProjectSlider />
       </section>
       <section>
-        <h1 className="text-center text-[2rem] my-[1rem]">Skills</h1>
+        <h1 className="text-center text-[4rem] my-[1rem] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+          Skills
+        </h1>
       </section>
 
       <section>

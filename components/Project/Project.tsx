@@ -5,7 +5,10 @@ import Image from "next/image";
 const ProjectCard = (props: Project) => {
   const { id, name, description, image, url, technologies, github } = props;
   return (
-    <div className="text-white my-[2rem]" data-aos="zoom-out">
+    <div
+      className="text-white my-[2rem] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+      data-aos="zoom-out"
+    >
       <div className="bg-red-400 rounded-lg shadow-md border-2 border-gray-700 border-solid transform transition ease-in-out duration-500 hover:scale-110 w-[300px] mx-auto">
         <div className="flex justify-center">
           <Image
@@ -18,7 +21,7 @@ const ProjectCard = (props: Project) => {
         </div>
         <div className="p-4 min-h-[240px] flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-700 truncate">
+            <h2 className="text-2xl font-semibold text-gray-700 truncate drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               {name}
             </h2>
             <p className="text-md break-words mb-4">{description}</p>
