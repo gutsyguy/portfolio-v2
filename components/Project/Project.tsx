@@ -39,7 +39,6 @@ const ProjectCard = (props: Project) => {
           </div>
         </div>
       </div>
-      //{" "}
     </Link>
   );
 };
