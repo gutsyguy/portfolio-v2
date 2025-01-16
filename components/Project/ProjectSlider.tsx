@@ -34,10 +34,9 @@ const ProjectSlider = () => {
   useEffect(() => {
     updateData();
   }, []);
-  if ( projects){
-
+  if (projects) {
     return (
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-evenly">
         <ProjectCard
           id={1}
           name={projects[0].name}

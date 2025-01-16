@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-300`}
         suppressHydrationWarning
       >
-        <div className="bg-navbar px-[15rem]">
+        <div className="bg-navbar lg:px-[15rem] md:px-[10rem] sm:px-[0rem]">
           <Navbar />
         </div>
         <div
@@ -41,7 +41,7 @@ export default function RootLayout({
             backgroundAttachment: "scroll",
           }}
         >
-          <div className="px[15rem]">{children}</div>
+          <div className="">{children}</div>
         </div>
       </body>
     </html>

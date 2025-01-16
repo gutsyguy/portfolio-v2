@@ -5,7 +5,7 @@ import Card from "@/components/Home/Card";
 
 export default function Home() {
   return (
-    <div className="text-gray-700 font-semibold px-[15rem]">
+    <div className="text-gray-700 font-semibold">
       <section className="flex flex-col items-center justify-center h-screen ">
         <Card />
       </section>

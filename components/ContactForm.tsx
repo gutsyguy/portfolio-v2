@@ -64,81 +64,52 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <div
-      className="flex justify-center items-center h-screen text-white  "
-      data-te-animation-init
-      data-te-animation-start="onScroll"
-      data-te-animation-on-scroll="repeat"
-      data-te-animation-show-on-load="false"
-      data-te-animation="[slide-right_1s_ease-in-out]"
-      data-aos="zoom-out"
-    >
+    <div className="flex justify-center items-center min-h-screen dark:bg-gray-900">
       <form
-        className="w-full max-w-[90%] mx-auto bg-red-400 rounded-xl p-8 border border-gray-700"
         onSubmit={sendEmail}
+        className="w-full max-w-lg bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6"
       >
-        <h1 className="text-3xl font-bold text-center mb-6">Contact Me</h1>
+        <h1 className="text-xl font-bold text-center mb-4">Contact Me</h1>
+        {[
+          { label: "Name", value: name, onChange: setName, type: "text" },
+          { label: "Email", value: email, onChange: setEmail, type: "email" },
+          {
+            label: "Subject",
+            value: subject,
+            onChange: setSubject,
+            type: "text",
+          },
+        ].map(({ label, value, onChange, type }, idx) => (
+          <div key={idx} className="mb-4">
+            <label htmlFor={label} className="block mb-2 text-gray-700">
+              {label}
+            </label>
+            <input
+              id={label}
+              type={type}
+              value={value}
+              onChange={(e) => onChange(e.target.value)}
+              className="w-full p-2 border border-gray-300 rounded"
+              required
+            />
+          </div>
+        ))}
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-2">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            className="w-full px-4 py-2 text-base text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={name}
-            onChange={handleNameChange}
-            required
-            placeholder="Enter name"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="w-full px-4 py-2 text-base text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={email}
-            onChange={handleEmailChange}
-            required
-            placeholder="Enter email"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="subject" className="block mb-2">
-            Subject
-          </label>
-          <input
-            type="text"
-            id="subject"
-            className="w-full px-4 py-2 text-base text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={subject}
-            onChange={handleSubjectChange}
-            required
-            placeholder="Enter subject"
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="message" className="block mb-2">
+          <label htmlFor="Message" className="block mb-2 text-gray-700">
             Message
           </label>
           <textarea
-            id="message"
-            className="w-full px-4 py-4 text-base text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            rows={4}
-            required
-            minLength={10}
-            maxLength={150}
+            id="Message"
             value={message}
-            onChange={handleMessageChange}
-            placeholder="Your message here..."
-          ></textarea>
+            onChange={(e) => setMessage(e.target.value)}
+            rows={4}
+            className="w-full p-2 border border-gray-300 rounded"
+            required
+          />
         </div>
         <button
           type="submit"
-          className="w-full text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-4 py-3 rounded-md shadow-sm transition duration-300 ease-in-out hover:-translate-y-0.5 transform"
+          className="w-full py-2 bg-red-400 text-white rounded hover:bg-red-500"
         >
           Submit
         </button>
