@@ -20,7 +20,7 @@ const RightTimelineComponent = (props: TimelineContainerProps) => {
             }`}
           >
             <div
-              className="p-4 bg-red-400 rounded shadow text-gray-700 border-solid border-gray-700 border-2 transform transition-all duration-500"
+              className="p-4 bg-red-400 dark:bg-blue-800 rounded shadow dark:border-white dark:text-white border-solid border-gray-700 border-2 transform transition-all duration-500"
               onMouseEnter={handleHoverTrue}
               onMouseLeave={handleHoverFalse}
             >
@@ -49,10 +49,10 @@ const RightTimelineComponent = (props: TimelineContainerProps) => {
             </div>
           </div>
         </div>
-        <div className="rounded-full bg-red-400 border-gray-700 border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+        <div className="rounded-full dark:bg-blue-800 bg-red-400 border-gray-700 dark:border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-700"
+            className="h-5 w-5 text-gray-700 dark:text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

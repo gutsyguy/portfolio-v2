@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,24 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-300`}
-        suppressHydrationWarning
-      >
-        <div className="bg-navbar lg:px-[15rem] md:px-[10rem] sm:px-[0rem]">
-          <Navbar />
-        </div>
-        <div
-          className="bg-top bg-cover px-0 "
-          style={{
-            // backgroundImage: "url('/vvvortex.svg')",
-            backgroundSize: "cover",
-            backgroundAttachment: "scroll",
-          }}
+      <ThemeProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-300 dark:bg-black`}
+          suppressHydrationWarning
         >
-          <div className="">{children}</div>
-        </div>
-      </body>
+          <Navbar />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -9,7 +9,7 @@ const LeftTimelineComponent = (props: TimelineContainerProps) => {
 
   return (
     <div
-      className="mt-6 sm:mt-0 sm:mb-12 transform transition duration-700"
+      className="mt-6 sm:mt-0 sm:mb-12 transform transition duration-700 "
       data-aos="zoom-out"
     >
       <div className="flex flex-col sm:flex-row items-center">
@@ -20,12 +20,14 @@ const LeftTimelineComponent = (props: TimelineContainerProps) => {
             }`}
           >
             <div
-              className="p-4 bg-red-400 rounded shadow text-gray-700 border-solid border-gray-700 border-2 transform transition-all duration-500"
+              className="p-4 bg-red-400 dark:bg-blue-800 rounded shadow dark:text-white border-solid dark:border-white border-gray-700 border-2 transform transition-all duration-500"
               onMouseEnter={handleHoverTrue}
               onMouseLeave={handleHoverFalse}
             >
               <div>
-                <h1 className="text-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">{props.company}</h1>
+                <h1 className="text-xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">
+                  {props.company}
+                </h1>
                 <h1 className="text-lg">{props.role}</h1>
                 <h1>{props.date}</h1>
                 {isHovering && (
@@ -47,10 +49,10 @@ const LeftTimelineComponent = (props: TimelineContainerProps) => {
             </div>
           </div>
         </div>
-        <div className="rounded-full bg-red-400 border-gray-700 border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+        <div className="rounded-full bg-red-400 dark:bg-blue-800 border-gray-700 dark:border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-700"
+            className="h-5 w-5 text-gray-700 dark:text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -7,26 +7,6 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
-
-  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    const inputValue = e.target.value;
-    setMessage(inputValue);
-  };
-
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const inputValue = e.target.value;
-    setEmail(inputValue);
-  };
-
-  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const inputValue = e.target.value;
-    setName(inputValue);
-  };
-
-  const handleSubjectChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const inputValue = e.target.value;
-    setSubject(inputValue);
-  };
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,12 +44,14 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen dark:bg-gray-900">
+    <div className="flex justify-center items-center min-h-screen dark:bg-black">
       <form
         onSubmit={sendEmail}
         className="w-full max-w-lg bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6"
       >
-        <h1 className="text-xl font-bold text-center mb-4">Contact Me</h1>
+        <h1 className="text-xl font-bold text-center mb-4 dark:text-white">
+          Contact Me
+        </h1>
         {[
           { label: "Name", value: name, onChange: setName, type: "text" },
           { label: "Email", value: email, onChange: setEmail, type: "email" },
@@ -81,7 +63,10 @@ const ContactForm = () => {
           },
         ].map(({ label, value, onChange, type }, idx) => (
           <div key={idx} className="mb-4">
-            <label htmlFor={label} className="block mb-2 text-gray-700">
+            <label
+              htmlFor={label}
+              className="block mb-2 text-gray-700 dark:text-white"
+            >
               {label}
             </label>
             <input
@@ -95,7 +80,10 @@ const ContactForm = () => {
           </div>
         ))}
         <div className="mb-4">
-          <label htmlFor="Message" className="block mb-2 text-gray-700">
+          <label
+            htmlFor="Message"
+            className="block mb-2 text-gray-700 dark:text-white"
+          >
             Message
           </label>
           <textarea
@@ -109,7 +97,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full py-2 bg-red-400 text-white rounded hover:bg-red-500"
+          className="w-full py-2 bg-red-400 dark:bg-blue-800 text-white rounded hover:dark:bg-blue-900 hover:bg-red-500"
         >
           Submit
         </button>

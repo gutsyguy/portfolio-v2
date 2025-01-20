@@ -15,10 +15,13 @@
     "classnames": "^2.5.1",
     "cors": "^2.8.5",
     "firebase": "^11.1.0",
+    "i": "^0.3.7",
     "next": "^15.1.4",
     "nodemailer": "^6.9.16",
+    "npm": "^11.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-switch": "^7.1.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

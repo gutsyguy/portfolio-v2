@@ -36,7 +36,7 @@ const ProjectSlider = () => {
   }, []);
   if (projects) {
     return (
-      <div className="flex flex-row justify-evenly">
+      <div className="flex lg:flex-row md:flex-col sm:flex-col justify-evenly">
         <ProjectCard
           id={1}
           name={projects[0].name}

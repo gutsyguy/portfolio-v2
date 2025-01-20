@@ -1,28 +1,13 @@
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class", // Enable class-based dark mode
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-      backgroundPosition:{
-        "navbar": "center 1rem"
-      },
-      transform:{
-        // "rotate": "rotate(90deg)"
-      },
-      rotate: {
-        '90': '90deg',
-        '-90': '-90deg',
-      },
-    },
+    extend: {},
   },
   plugins: [],
-} satisfies Config;
+};
