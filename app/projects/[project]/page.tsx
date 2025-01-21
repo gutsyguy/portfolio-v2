@@ -2,9 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Project } from "@/lib/interfaces";
-import Image from "next/image";
 import { db } from "@/lib/firebase";
-import Link from "next/link";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import DOMPurify from "dompurify";
 
