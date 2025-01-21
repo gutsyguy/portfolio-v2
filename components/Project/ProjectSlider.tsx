@@ -20,6 +20,8 @@ const ProjectSlider = () => {
         description: doc.data().description,
         url: doc.data().url,
         technologies: doc.data().tools,
+        date: doc.data().date,
+        page: doc.data().page,
       }));
 
       projectData.sort((a, b) => a.id - b.id);
@@ -44,6 +46,8 @@ const ProjectSlider = () => {
           image="/file.svg"
           url="yalamber-subba.vercel.app"
           technologies={projects[0].technologies}
+          page={"Dne"}
+          date="DNE"
           github="https://github.com/gutsyguy"
         />
         <ProjectCard
@@ -53,6 +57,8 @@ const ProjectSlider = () => {
           image="/file.svg"
           url="yalamber-subba.vercel.app"
           technologies={projects[1].technologies}
+          page={"Dne"}
+          date="DNE"
           github="https://github.com/gutsyguy"
         />
         <ProjectCard
@@ -62,6 +68,8 @@ const ProjectSlider = () => {
           image="/file.svg"
           url="yalamber-subba.vercel.app"
           technologies={projects[2].technologies}
+          page={"Dne"}
+          date="DNE"
           github="https://github.com/gutsyguy"
         />
       </div>

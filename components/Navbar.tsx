@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`border border-gray-200 ${
+      className={`border border-gray-600 ${
         isDarkMode ? "text-white" : "text-gray-600"
       }`}
     >

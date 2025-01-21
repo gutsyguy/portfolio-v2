@@ -8,6 +8,8 @@ export interface Project{
     url: string;
     technologies: string[];
     github: string;
+    page:string;
+    date:string;
 }
 
 export interface TimelineElement{

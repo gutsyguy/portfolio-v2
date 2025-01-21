@@ -21,6 +21,8 @@ const Page = () => {
         description: doc.data().description,
         url: doc.data().url,
         technologies: doc.data().tools,
+        date: doc.data().date,
+        page: doc.data().page
       }));
 
       projectData.sort((a, b) => a.id - b.id);
@@ -50,6 +52,8 @@ const Page = () => {
               technologies={project.technologies}
               github={project.github}
               key={index}
+              page={project.page}
+              date={project.date}
             />
           ))
         ) : (
