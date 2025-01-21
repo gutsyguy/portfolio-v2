@@ -47,7 +47,7 @@ const ContactForm = () => {
     <div className="flex justify-center items-center min-h-screen dark:bg-black ">
       <form
         onSubmit={sendEmail}
-        className="w-full max-w-lg bg-white border-black dark:bg-gray-600 border-2 dark:border-gray-600 shadow-lg rounded-xl p-6"
+        className="w-full max-w-lg bg-white border-black dark:bg-gray-700 border-2 dark:border-gray-600 shadow-lg rounded-xl p-6"
       >
         <h1 className="text-xl font-bold text-center mb-4 dark:text-white">
           Contact Me
