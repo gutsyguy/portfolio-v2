@@ -10,10 +10,6 @@ export default function Home() {
         <Card />
       </section>
       <section>
-        <h1>Who I am</h1>
-        <p></p>
-      </section>
-      <section>
         <h1 className="text-center text-[4rem] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           Example Projects
         </h1>
