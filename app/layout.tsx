@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-300 dark:bg-black w-screen overflow-x-hidden`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#D9EAFD] dark:bg-black w-screen overflow-x-hidden`}
           suppressHydrationWarning
         >
           <Navbar />

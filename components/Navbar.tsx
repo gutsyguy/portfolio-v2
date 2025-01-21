@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ReactSwitch from "react-switch";
 import Modal from "./Modal";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -92,18 +93,30 @@ const Navbar = () => {
             <ReactSwitch
               onChange={toggleTheme}
               checked={isDarkMode}
-              offColor="#d89527"
+              offColor="#BCCCDC"
               onColor="#15150e"
-              className="px-[0.75rem]"
+              className="px-[0.75rem] "
               uncheckedIcon={
-                <p className="text-[0.5rem]  flex items-center justify-center h-full w-full">
-                  Light
-                </p>
+                // <p className="text-[0.5rem]  flex items-center justify-center h-full w-full">
+                //   Light
+
+                // </p>
+                <Image
+                  src={"/light-icon.png"}
+                  alt="light"
+                  className="flex items-center justify-center h-full w-full"
+                  width={32}
+                  height={32}
+                />
               }
               checkedIcon={
-                <p className="text-[0.5rem] text-white flex items-center justify-center h-full w-full">
-                  Dark
-                </p>
+                <Image
+                  className="flex items-center justify-center h-full w-full"
+                  src={"/dark-icon.png"}
+                  alt="light"
+                  width={32}
+                  height={32}
+                />
               }
             />
           </ul>
