@@ -51,7 +51,10 @@ const Timeline = () => {
       id="Timeline"
     >
       <div className="text-center pt-[1rem] text-gray-600 dark:text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-        <h1 data-aos="fade-up" className="text-[5rem]">
+        <h1
+          data-aos="fade-up"
+          className="lg:text-[5rem] md:text-[4rem] text-[3rem]"
+        >
           <b>Experience</b>
         </h1>
       </div>

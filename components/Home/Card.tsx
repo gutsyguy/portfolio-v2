@@ -7,8 +7,8 @@ const Card: React.FC = () => {
       data-aos="zoom-out"
       className="flex flex-col items-start mb-5 p-6 sm:p-10 bg-white border-2 border-black shadow-2xl rounded-2xl dark:bg-gray-800 dark:border-gray-600 dark:shadow-transparent"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-4 w-full text-center">
-        <div className="flex flex-col items-start text-center sm:text-left">
+      <div className="flex justify-center sm:grid-cols-2 items-center gap-4 w-full text-center">
+        <div className="flex flex-col justify-center sm:items-center items-start text-center sm:text-left">
           <h1 className="font-bold text-4xl sm:text-5xl lg:text-7xl tracking-tight mb-3 sm:mb-1 text-red-400 dark:text-blue-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             Yalamber <br /> Subba
           </h1>
