@@ -32,9 +32,8 @@ const RightTimelineComponent = (props: TimelineContainerProps) => {
                 <h1>{props.date}</h1>
                 {isHovering && (
                   <div
-                    className="list-disc pl-5 overflow-y-auto mt-4"
+                    className="list-disc pl-5 mt-4"
                     style={{
-                      maxHeight: "150px",
                       paddingRight: "1rem",
                     }}
                   >
