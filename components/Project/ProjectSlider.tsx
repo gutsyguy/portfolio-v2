@@ -43,7 +43,7 @@ const ProjectSlider = () => {
           id={1}
           name={projects[0].name}
           description={projects[0].description}
-          image="/file.svg"
+          image="/transit-track.png"
           url="yalamber-subba.vercel.app"
           technologies={projects[0].technologies}
           page={"Dne"}
@@ -54,7 +54,7 @@ const ProjectSlider = () => {
           id={1}
           name={projects[1].name}
           description={projects[1].description}
-          image="/file.svg"
+          image="/elgoog.png"
           url="yalamber-subba.vercel.app"
           technologies={projects[1].technologies}
           page={"Dne"}
@@ -65,7 +65,7 @@ const ProjectSlider = () => {
           id={1}
           name={projects[2].name}
           description={projects[2].description}
-          image="/file.svg"
+          image="/trashbot.png"
           url="yalamber-subba.vercel.app"
           technologies={projects[2].technologies}
           page={"Dne"}
