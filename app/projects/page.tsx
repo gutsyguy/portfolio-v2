@@ -27,7 +27,6 @@ const Page = () => {
 
       projectData.sort((a, b) => a.id - b.id);
 
-      console.log(projectData);
       setProjects(projectData);
     } catch (error) {
       console.error("Error fetching inventory:", error);

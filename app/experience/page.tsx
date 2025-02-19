@@ -32,7 +32,6 @@ const Timeline = () => {
 
       timelineData.sort((a, b) => a.id - b.id);
 
-      console.log(timelineData);
       setData(timelineData);
     } catch (error) {
       console.error("Error fetching inventory:", error);
